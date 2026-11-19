@@ -1,9 +1,11 @@
 
+import java.math.BigInteger;
+
 public class Fibonacci {
     public static void main(String[] args) {
 
-        long first = 0;
-        long second = 1;
+        BigInteger first = BigInteger.ZERO;
+        BigInteger second = BigInteger.ONE;
 
         System.out.println("First 100 Fibonacci numbers:");
 
@@ -11,7 +13,7 @@ public class Fibonacci {
 
             System.out.print(first + " ");
 
-            long next = first + second;
+            BigInteger next = first.add(second);
             first = second;
             second = next;
         }
